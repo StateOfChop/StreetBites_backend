@@ -1,5 +1,3 @@
-version: '3.8'
-
 services:
   postgres:
     image: postgres:16-alpine
@@ -9,7 +7,7 @@ services:
       POSTGRES_PASSWORD: postgres123
       POSTGRES_DB: streetbites
     ports: 
-      - "5432:5432"
+      - "5433:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
     healthcheck:
@@ -17,6 +15,20 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
+    networks:
+      - streetbites-network
+
+  streetbites-api:
+    build: .
+    container_name: streetbites-api
+    ports:
+      - "5000:8080"
+    environment:
+      - ConnectionStrings__DefaultConnection=Server=postgres;Port=5432;Database=streetbites;User Id=postgres;Password=postgres123;
+      - ASPNETCORE_ENVIRONMENT=Development
+    depends_on:
+      postgres:
+        condition: service_healthy
     networks:
       - streetbites-network
 
