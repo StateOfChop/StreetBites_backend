@@ -33,7 +33,11 @@ namespace StreetBites.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(new { message = ex.Message });
+                return BadRequest(new 
+                { 
+                    message = ex.Message,
+                    inner = ex.InnerException?.Message 
+                });
             }
         }
 

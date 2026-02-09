@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\migue\\Desktop\\Programmation\\Angular\\StreetBites\\StreetBites.csproj": {}
+    "C:\\Users\\USER\\Desktop\\BRAHIAN\\Riwi\\Dllo\\Complementos\\Angular\\StreetBites\\StreetBites_backend\\StreetBites.csproj": {}
   },
   "projects": {
-    "C:\\Users\\migue\\Desktop\\Programmation\\Angular\\StreetBites\\StreetBites.csproj": {
+    "C:\\Users\\USER\\Desktop\\BRAHIAN\\Riwi\\Dllo\\Complementos\\Angular\\StreetBites\\StreetBites_backend\\StreetBites.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\migue\\Desktop\\Programmation\\Angular\\StreetBites\\StreetBites.csproj",
+        "projectUniqueName": "C:\\Users\\USER\\Desktop\\BRAHIAN\\Riwi\\Dllo\\Complementos\\Angular\\StreetBites\\StreetBites_backend\\StreetBites.csproj",
         "projectName": "StreetBites",
-        "projectPath": "C:\\Users\\migue\\Desktop\\Programmation\\Angular\\StreetBites\\StreetBites.csproj",
-        "packagesPath": "C:\\Users\\migue\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\migue\\Desktop\\Programmation\\Angular\\StreetBites\\obj\\",
+        "projectPath": "C:\\Users\\USER\\Desktop\\BRAHIAN\\Riwi\\Dllo\\Complementos\\Angular\\StreetBites\\StreetBites_backend\\StreetBites.csproj",
+        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\USER\\Desktop\\BRAHIAN\\Riwi\\Dllo\\Complementos\\Angular\\StreetBites\\StreetBites_backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\migue\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -56,6 +56,10 @@
               "version": "[8.0.20, )"
             },
             "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.10, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
               "target": "Package",
               "version": "[8.0.10, )"
             },
