@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\USER\\Desktop\\BRAHIAN\\Riwi\\Dllo\\Complementos\\Angular\\StreetBites\\StreetBites_backend\\StreetBites.csproj": {}
+    "/home/juan/Escritorio/StreetBites_backend/StreetBites.csproj": {}
   },
   "projects": {
-    "C:\\Users\\USER\\Desktop\\BRAHIAN\\Riwi\\Dllo\\Complementos\\Angular\\StreetBites\\StreetBites_backend\\StreetBites.csproj": {
+    "/home/juan/Escritorio/StreetBites_backend/StreetBites.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\USER\\Desktop\\BRAHIAN\\Riwi\\Dllo\\Complementos\\Angular\\StreetBites\\StreetBites_backend\\StreetBites.csproj",
+        "projectUniqueName": "/home/juan/Escritorio/StreetBites_backend/StreetBites.csproj",
         "projectName": "StreetBites",
-        "projectPath": "C:\\Users\\USER\\Desktop\\BRAHIAN\\Riwi\\Dllo\\Complementos\\Angular\\StreetBites\\StreetBites_backend\\StreetBites.csproj",
-        "packagesPath": "C:\\Users\\USER\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\USER\\Desktop\\BRAHIAN\\Riwi\\Dllo\\Complementos\\Angular\\StreetBites\\StreetBites_backend\\obj\\",
+        "projectPath": "/home/juan/Escritorio/StreetBites_backend/StreetBites.csproj",
+        "packagesPath": "/home/juan/.nuget/packages/",
+        "outputPath": "/home/juan/Escritorio/StreetBites_backend/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\USER\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "/home/juan/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -32,11 +32,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -91,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.414/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/8.0.123/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

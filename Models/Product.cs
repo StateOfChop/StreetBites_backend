@@ -17,6 +17,7 @@ namespace StreetBites.Models
         public decimal Price { get; set; }
         
         public int Stock { get; set; } = 0;
+        public string? ImageUrl { get; set; }
         public bool IsActive { get; set; } = true;
         
         public DateTime CreatedAt { get; set; } = DateTime.UtcNow;

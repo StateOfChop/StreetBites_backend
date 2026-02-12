@@ -67,6 +67,7 @@ namespace StreetBites.Controllers
                 Description = dto.Description,
                 Price = dto.Price,
                 Stock = dto.Stock,
+                ImageUrl = dto.ImageUrl,
                 IsActive = dto.IsActive,
                 CreatedAt = DateTime.UtcNow
             };
@@ -92,6 +93,7 @@ namespace StreetBites.Controllers
             product.Description = dto.Description;
             product.Price = dto.Price;
             product.Stock = dto.Stock;
+            product.ImageUrl = dto.ImageUrl;
             product.IsActive = dto.IsActive;
 
             await _repository.UpdateAsync(product);

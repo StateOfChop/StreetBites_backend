@@ -17,6 +17,8 @@ namespace StreetBites.Dtos
         [Range(0, int.MaxValue, ErrorMessage = "Stock must be >= 0")]
         public int Stock { get; set; } = 0;
 
+        public string? ImageUrl { get; set; }
+
         public bool IsActive { get; set; } = true;
     }
 }
