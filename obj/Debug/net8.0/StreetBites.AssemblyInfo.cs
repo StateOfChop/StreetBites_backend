@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StreetBites")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+690c5e982281b616f91342cd68294241ea59c9f1")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8669a343b85b185cabd0e6651481a2982a307893")]
 [assembly: System.Reflection.AssemblyProductAttribute("StreetBites")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StreetBites")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

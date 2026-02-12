@@ -108,6 +108,16 @@ namespace StreetBites.Controllers
                 return BadRequest(new { message = $"Products not available: {string.Join(", ", inactiveProducts)}" });
             }
 
+            // Validate stock availability for all items
+            foreach (var itemDto in dto.Items)
+            {
+                var product = products.First(p => p.Id == itemDto.ProductId);
+                if (product.Stock < itemDto.Quantity)
+                {
+                    return BadRequest(new { message = $"Insufficient stock for '{product.Name}'. Available: {product.Stock}, Requested: {itemDto.Quantity}" });
+                }
+            }
+
             // Create the order
             var order = new Order
             {
@@ -116,7 +126,7 @@ namespace StreetBites.Controllers
                 CreatedAt = DateTime.UtcNow
             };
 
-            // Create order items with price history (copy current price)
+            // Create order items with price history and deduct stock
             decimal total = 0;
             foreach (var itemDto in dto.Items)
             {
@@ -126,16 +136,19 @@ namespace StreetBites.Controllers
                     OrderId = order.Id,
                     ProductId = product.Id,
                     Quantity = itemDto.Quantity,
-                    Price = product.Price // Copy the current price for price history
+                    Price = product.Price
                 };
                 order.Items.Add(orderItem);
                 total += product.Price * itemDto.Quantity;
+
+                // Deduct stock
+                product.Stock -= itemDto.Quantity;
             }
 
             order.Total = total;
 
             await _repository.AddAsync(order);
-            await _repository.SaveAsync();
+            await _context.SaveChangesAsync();
 
             // Reload the order with navigation properties for response
             var createdOrder = await _repository.GetByIdAsync(order.Id);
@@ -195,9 +208,19 @@ namespace StreetBites.Controllers
                 return BadRequest(new { message = "Only PENDING orders can be cancelled" });
             }
 
+            // Restore stock for each item in the cancelled order
+            foreach (var item in order.Items)
+            {
+                var product = await _context.Products.FindAsync(item.ProductId);
+                if (product != null)
+                {
+                    product.Stock += item.Quantity;
+                }
+            }
+
             order.Status = OrderStatus.CANCELLED;
             await _repository.UpdateAsync(order);
-            await _repository.SaveAsync();
+            await _context.SaveChangesAsync();
 
             return Ok(new { message = "Order cancelled successfully", order });
         }
